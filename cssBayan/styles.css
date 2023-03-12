@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800,900,&display=swap);
+
+:root {
+    --text-size: 1em;
+    --text-color: #ff7900;
+    --text-color-checked: #FFFF00;
+    --text-color-active: #ff2400;
+    --bg-color: #14181F;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    background: var(--bg-color);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 110em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--text-size)*5);
+    font-weight: 800;
+}
+
+.mainly {
+    width: 70%;
+    padding: 3em 0 0 0;
+}
+
+.bayan {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding: 0.5em;
+
+}
+
+.input-one {}
+
+.label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.wrapp {
+    width: 98%;
+    height: 3.5em;
+    display: flex;
+    justify-content: space-between;
+    background: #293133;
+    align-items: center;
+    box-shadow: 0px 0px 0.4em var(--text-color-checked);
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+    margin-top: 1em;
+
+}
+
+.bayan-subtitle {
+    font-size: calc(var(--text-size) * 2);
+    padding-left: 0.3em;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+.bayan-icon {
+    opacity: 0;
+    background: url('./assets/plus.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: calc(var(--text-size) * 3);
+    height: calc(var(--text-size) * 3);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.bayan-img {
+    width: 0;
+    height: 0;
+    align-self: center;
+    padding: 1em;
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+    transition: all .20s ease-out;
+    -webkit-transition: all .20s ease-out;
+    -moz-transition: all .20s ease-out;
+    -ms-transition: all .20s ease-out;
+    -o-transition: all .20s ease-out;
+}
+
+input:checked~label {
+    box-shadow: 0px 0px 0.4em var(--text-color-checked);
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+
+input:checked~label .bayan-subtitle {
+    color: var(--text-color-checked);
+}
+
+input:checked~label .bayan-icon {
+    opacity: 1;
+    transform: rotate(45deg);
+}
+
+input:checked~label .bayan-img {
+    width: 30em;
+    height: auto;
+}
+
+.bayan:hover .bayan-img {
+    width: 30em;
+    height: auto;
+}
+
+.mainly:hover .bayan-subtitle {
+    color: var(--text-color-checked)
+}
+
+.mainly:hover .bayan-icon {
+    opacity: 1;
+}
+
+.bayan:hover .bayan-icon {
+    transform: rotate(45deg);
+}
+
+.label:active .bayan-subtitle {
+    color: var(--text-color-active);
+    opacity: 0.8;
+
+}
+.label:active .bayan-icon {
+    background: url('./assets/plus-copy.svg');  
+}
+
+/* .label:active .bayan-icon {
+    opacity: 0.8;
+}
+
+.label:active .bayan-img {
+    opacity: 0.8;
+} */
+
+.bayan:hover .label {
+    box-shadow: 0px 0px 0.4em var(--text-color-checked);
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
